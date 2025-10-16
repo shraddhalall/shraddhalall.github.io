@@ -68,6 +68,8 @@
 		font-weight: _font(weight-bold);
 		line-height: 1.65;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		font-family: _font(family-heading);
+  		letter-spacing: 0.02em;  
 
 		a {
 			color: inherit;
@@ -175,3 +177,11 @@
 	.align-right {
 		text-align: right;
 	}
+
+.post-content p { font-size: 1.05em; line-height: 1.7; margin-bottom: 1.2em; }
+.tags { margin-top: 2em; font-size: 0.9em; color: rgba(255,255,255,0.7); }
+.tags .tag { background: rgba(255,255,255,0.15); padding: .25em .6em; margin-right: .3em; border-radius: .25em; }
+.back-link { margin-top: 3em; text-align: center; }
+.back-link .button.small { font-size: .85em; padding: .6em 1.2em; border-radius: 2em; background: rgba(255,255,255,0.1); transition: background-color .2s ease; }
+.back-link .button.small:hover { background: rgba(255,255,255,0.25); }
+

@@ -8,4 +8,10 @@ author: null
 show_tile: false
 ---
 
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+I am a freelance science writer and editor, aiming to turn complex research ideas into clear, accurate and engaging stories through writing, editing and fact-checking. 
+
+With a background in research and teaching, I bring strong data-analysis and visualization skills, and a passion for biodiversity, climate, and scientific ethics. I love finding creative ways to make science and learning enjoyable for audiences of all ages.
+
+I've written and edited pieces on topics spanning ecology, evolution, animal behavior, and STEM education to the chemitstry of everyday life. Whether you need a feature-length explainer, sharp reporting and fact-checking, or thoughful editing support, I can help shape ideas into compelling stories.
+
+<a href="#contact" class="button next scrolly">Get in Touch</a>

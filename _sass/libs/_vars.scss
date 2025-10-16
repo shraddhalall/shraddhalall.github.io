@@ -18,30 +18,31 @@
 		inner:				65em
 	);
 
-// Font.
-	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
-		weight:				300,
-		weight-bold:		600,
-		letter-spacing:		0.025em,
-		letter-spacing-alt:	0.25em
-	);
+// Font modified
+$font: (
+  family:             ('Quicksand', 'Helvetica', 'Arial', sans-serif),
+  family-fixed:       ('Courier New', monospace),
+  family-heading:     ('Lora', serif),
+  weight:             400,
+  weight-bold:        700,
+  letter-spacing:     0.02em,
+  letter-spacing-alt: 0.15em
+);
 
 // Palette.
 	$palette: (
-		bg:					#242943,
-		bg-alt:				#2a2f4a,
+		bg:					#37113d,
+		bg-alt:				#44184D,
 		fg:					#ffffff,
 		fg-bold:			#ffffff,
 		fg-light:			rgba(244,244,255,0.2),
 		border:				rgba(212,212,255,0.1),
 		border-bg:			rgba(212,212,255,0.035),
-		highlight:			#9bf1ff,
-		accent1:			#6fc3df,
-		accent2:			#8d82c4,
-		accent3:			#ec8d81,
-		accent4:			#e7b788,
-		accent5:			#8ea9e8,
-		accent6:			#87c5a4
+		highlight:			#7ED6C0,
+		accent2:			#9257B7,
+		accent4:			#DB6F9D,
+		accent5:			#FFA84B,
+		accent3:			#7ED6C0,
+		accent1:			#4BB0E0,
+		accent6:			#D7C8FF
 	);

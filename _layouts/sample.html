@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<!-- Main -->
+<div id="main">
+  <section id="one">
+    <div class="inner">
+
+      <header class="major">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <p>{{ page.subtitle }}</p>
+        {% endif %}
+      </header>
+
+      <section class="post-content">
+        {{ content }}
+      </section>
+
+      {% if page.tags %}
+      <footer class="tags">
+        <p><strong>Tags:</strong>
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </p>
+      </footer>
+      {% endif %}
+
+      <footer class="back-link">
+        <hr style="border:0;border-top:1px solid rgba(255,255,255,0.1);margin-bottom:2em;">
+        <a href="{{ '/writing-samples/' | relative_url }}" class="button small">← Back to Writing Samples</a>
+      </footer>
+
+    </div>
+  </section>
+</div>
