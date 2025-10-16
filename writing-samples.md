@@ -9,9 +9,7 @@ nav-menu: true
 ---
 
 <!-- Post tiles (cards) -->
-{% assign samples = site.posts
-  | where_exp: "p", "p.categories contains 'writing-samples' or p.tags contains 'writing-samples'"
-  | sort: "date" | reverse %}
+{% assign samples = site.posts | where_exp:"p","p.categories contains 'writing-samples'" | sort:"date" | reverse %}
 
 <section class="tiles tiles--samples">
   {% for post in samples %}
