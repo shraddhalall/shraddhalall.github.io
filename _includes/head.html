@@ -3,27 +3,27 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-  <!-- ✅ SEO Description -->
+  <!-- Primary SEO description -->
   <meta name="description" content="{% if page.seo_description %}{{ page.seo_description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
 
-  <!-- ✅ Canonical URL -->
+  <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 
-  <!-- ✅ Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
   <meta property="og:description" content="{% if page.seo_description %}{{ page.seo_description | strip_html | strip_newlines | truncate: 200 }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 200 }}{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% else %}{{ '/assets/images/writing.jpg' | absolute_url }}{% endif %}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% elsif site.headshot %}{{ site.headshot | absolute_url }}{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
 
-  <!-- ✅ Twitter Card (kept minimal, still helps Google snippets) -->
+  <!-- Twitter Card (kept minimal) -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
   <meta name="twitter:description" content="{% if page.seo_description %}{{ page.seo_description | strip_html | strip_newlines | truncate: 200 }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 200 }}{% endif %}">
-  <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% else %}{{ '/assets/images/writing.jpg' | absolute_url }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% elsif site.headshot %}{{ site.headshot | absolute_url }}{% endif %}">
 
-  <!-- ✅ JSON-LD Schema (only LinkedIn cross-link) -->
+  <!-- JSON-LD (no conditionals; uses your LinkedIn and headshot/banner) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,11 +32,9 @@
         "@type": "Person",
         "name": "Shraddha Lall",
         "url": "{{ '/' | absolute_url }}",
-        "image": "{% if site.headshot %}{{ site.headshot | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% else %}{{ '/assets/images/writing.jpg' | absolute_url }}{% endif %}",
+        "image": {% if site.headshot %}"{{ site.headshot | absolute_url }}"{% elsif site.image %}"{{ site.image | absolute_url }}"{% else %}null{% endif %},
         "jobTitle": "Science writer & editor",
-        "sameAs": [
-          {% if site.linkedin %}"{{ site.linkedin }}"{% endif %}
-        ]
+        "sameAs": [{% if site.linkedin %}"{{ site.linkedin }}"{% endif %}]
       },
       {
         "@type": "WebSite",
@@ -47,9 +45,9 @@
   }
   </script>
 
-  <!-- Existing assets -->
+  <!-- Fonts & CSS (use single quotes inside Liquid to avoid nested-quote issues) -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
-  <!--[if lte IE 9]><link rel="stylesheet" href="{{ "assets/css/ie9.css" | relative_url }}" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="{{ "assets/css/ie8.css" | relative_url }}" /><![endif]-->
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="{{ 'assets/css/ie9.css' | relative_url }}" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="{{ 'assets/css/ie8.css' | relative_url }}" /><![endif]-->
 </head>
