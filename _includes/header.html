@@ -21,7 +21,7 @@
 	    	{% endif %}
 		{% endfor %}
 		{% assign menu_pages = site.html_pages 
-   			| where_exp: "p", "p.layout != 'home' and p.["nav-menu"] == true" 
+   			| where_exp: "p", "p.layout != 'home' and p.nav-menu == true" 
    			| sort: "order" %}
 		{% for page in menu_pages %}
     		<li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
