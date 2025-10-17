@@ -5,9 +5,12 @@ permalink: /resume/
 show_tile: true
 image: /assets/images/samples/placeholder.jpg
 order: 6
+resume_path: /assets/docs/resume.pdf
+cv_path: /assets/docs/academic-cv.pdf
 description: |
   <ul class="actions">
-    <li><a href="{{ '/assets/docs/resume.pdf' | relative_url }}" class="button large icon solid fa-download" target="_blank">Résumé</a></li>
-    <li><a href="{{ '/assets/docs/academic-cv.pdf' | relative_url }}" class="button large icon solid fa-download" target="_blank">Academic CV</a></li>
+    <li><a class="button large icon solid fa-download" target="_blank" href="">Résumé</a></li>
+    <li><a class="button large icon solid fa-download" target="_blank" href="">Academic CV</a></li>
   </ul>
+disable_tile_link: true
 ---

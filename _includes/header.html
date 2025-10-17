@@ -20,11 +20,13 @@
 		        <li><a href="{{ '/' | relative_url }}">{{ page.title }}</a></li>
 	    	{% endif %}
 		{% endfor %}
-		{% for page in site.html_pages %}
-		    {% if page.layout != "home" and page.nav-menu == true %}
-		        <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-		    {% endif %}
+		{% assign menu_pages = site.html_pages 
+   			| where_exp: "p", "p.layout != 'home' and p.nav-menu == true" 
+   			| sort: "order" %}
+		{% for page in menu_pages %}
+    		<li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
 		{% endfor %}
+
 	</ul>
 	<ul class="actions vertical">
 		<li><a href="#contact" class="button special fit">Get In Touch</a></li>

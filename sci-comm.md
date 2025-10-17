@@ -35,7 +35,7 @@ order: 4
   </li>
   <li>
     Workshop: “Science, Story, and Pictures: A Beginner’s Guide to Communicating Your Science with Comics” (Entomology Conference, 2024).<br>
-    <a href="#">Here is the comic (PDF)</a> I made highlighting my research questions.
+    <a href="{{ '/assets/docs/comic.pdf' | relative_url }}">Here is the comic (PDF)</a> I made highlighting my research questions.
   </li>
 </ul>
 

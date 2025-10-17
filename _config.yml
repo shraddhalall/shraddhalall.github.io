@@ -12,6 +12,14 @@ state: MA
 zip_code: 
 country: 
 phone: 
+# Default site-wide image for SEO and link previews
+image: /assets/images/banner.jpg
+
+# Used in structured Person data
+headshot: /assets/images/headshot.jpg
+
+# Cross-link for identity
+linkedin: https://www.linkedin.com/in/shraddha-lall/
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -42,3 +50,7 @@ exclude:
 - LICENSE.md
 - CONTRIBUTING.md
 - README.md 
+
+plugins:
+  - jekyll-sitemap
+

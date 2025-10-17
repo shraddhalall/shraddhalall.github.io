@@ -12,8 +12,24 @@
       <img src="{{ tile.image }}" alt="{{ tile.title }}" />
     </span>
     <header class="major">
-      <h3><a href="{{ tile.url  | relative_url }}" class="link">{{ tile.title }}</a></h3>
-      <p>{{ tile.description }}</p>
+      <h3>
+        {% if tile.disable_tile_link %}
+          {{ tile.title }}
+        {% else %}
+          <a href="{{ tile.url | relative_url }}" class="link">{{ tile.title }}</a>
+        {% endif %}
+      </h3>
+
+      {% if tile.resume_path and tile.cv_path %}
+        <div class="content">
+        <ul class="actions">
+          <li><a href="{{ tile.resume_path | relative_url }}" class="button large icon solid fa-download" target="_blank">Résumé</a></li>
+          <li><a href="{{ tile.cv_path | relative_url }}" class="button large icon solid fa-download" target="_blank">Academic CV</a></li>
+        </ul>
+      </div>
+      {% else %}
+        <div class="content">{{ tile.description }}</div>
+      {% endif %}
     </header>
   </article>
   {% endfor %}
