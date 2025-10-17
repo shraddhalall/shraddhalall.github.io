@@ -55,6 +55,15 @@
 				}
 			}
 
+			p {
+        		text-transform: none;
+        		letter-spacing: normal;
+        		font-size: 1.25em;
+        		line-height: 1.7;
+       			opacity: 1;
+				font-weight: 400;
+      		}
+
 			.link.primary {
 				border: 0;
 				height: 100%;
@@ -180,4 +189,7 @@
 				width: 100% !important;
 			}
 		}
+	}
+	.tiles article .actions {
+ 	 margin-top: 0.75rem;
 	}

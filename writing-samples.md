@@ -3,9 +3,10 @@ layout: page
 title: Writing Samples
 permalink: /writing-samples/
 image: /assets/images/writing.jpg
-description: "Unpublished writing samples that highlight how I translate complex research into accessible, compelling narratives."
+description: "Unpublished writing samples where I translate complex research into curiosity-driven stories."
 show_tile: true
 nav-menu: true
+order: 2
 ---
 
 <!-- Post tiles (cards) -->

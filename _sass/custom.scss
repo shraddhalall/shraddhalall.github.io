@@ -1,0 +1,22 @@
+/* Banner layout */
+#banner .content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left-align the paragraph */
+#banner .content > p {
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Right-align the button list */
+#banner .content > ul.actions {
+  align-self: flex-end;
+  margin-top: 5rem;
+}
+/* Remove when adding Research section */
+.tiles article:last-child {
+  flex: 0 0 100%;          /* Take up full row width */
+  max-width: 100%;
+}
