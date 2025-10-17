@@ -13,21 +13,19 @@
 </header>
 
 <!-- Menu -->
-<nav id="menu">
-	<ul class="links">
-        {% for page in site.pages %}
-		    {% if page.layout == "home" %}
-		        <li><a href="{{ "" | relative_url }}/">{{ page.title }}</a></li>
-	    	{% endif %}
-		{% endfor %}
-		{% for page in site.html_pages %}
-		    {% if page.layout != "home" and page.nav-menu == true %}
-		        <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-		    {% endif %}
-		{% endfor %}
-	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
-	</ul>
-</nav>
+  <nav id="menu">
+    <ul class="links">
+      <!-- Home link -->
+      <li><a href="{{ '/' | relative_url }}">{{ site.title }}</a></li>
+
+      {% assign sorted_pages = site.html_pages | sort: 'order' %}
+      {% for p in sorted_pages %}
+        {% if p.layout != 'home' and p['nav-menu'] == true %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="actions vertical">
+      <li><a href="#contact" class="button special fit">Get In Touch</a></li>
+    </ul>
+  </nav>
