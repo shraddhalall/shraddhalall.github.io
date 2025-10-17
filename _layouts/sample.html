@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Main -->
-<div id="main">
+<div id="main" class="alt">
   <section id="one">
     <div class="inner">
 
@@ -14,19 +14,7 @@ layout: default
         {% endif %}
       </header>
 
-      <section class="post-content">
-        {{ content }}
-      </section>
-
-      {% if page.tags %}
-      <footer class="tags">
-        <p><strong>Tags:</strong>
-          {% for tag in page.tags %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </p>
-      </footer>
-      {% endif %}
+      {{ content }}
 
       <footer class="back-link">
         <hr style="border:0;border-top:1px solid rgba(255,255,255,0.1);margin-bottom:2em;">
